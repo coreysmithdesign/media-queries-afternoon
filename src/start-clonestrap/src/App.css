@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial";
+}
+
+.site-nav {
+  background-color: #191c1f;
+}
+
+.logo {
+  width: 140px;
+}
+
+.site-nav-contain {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hamburguesa {
+  color: white;
+  background: #fed136;
+  font-size: .75rem;
+  border: 0;
+  padding: .5rem .75rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.hamburguesa:hover {
+  cursor: pointer;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 0px;
+  transition: all .2s;
+}
+
+.nav-list-open {
+  height: 240px; 
+}
+
+.nav-list-item {
+  list-style: none;
+}
+
+.nav-list-link {
+  display: block;
+  margin: 1rem 0;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .5px;
+  transition: color .1s;
+}
+
+.nav-list-link:hover {
+  color: #fed136;
+}
+
+.site-header {
+  background-image: url('cover.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.kicker,
+.lead,
+.cta {
+  margin: 1rem;
+}
+
+.kicker {
+  font-size: 2rem;
+  font-style: oblique;
+  font-family: serif;
+  text-transform: capitalize;
+}
+
+.lead {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cta {
+  background: #fed136;
+  text-transform: uppercase;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.services-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service {
+  margin: 2rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media only screen and (min-width: 300px) {
+  .hamburguesa {
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .site-nav {
+    background: none;
+    height: 94px;
+    margin-bottom: -94px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .site-nav-contain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    display: block;
+    height: auto;
+  }
+
+  .nav-list-item {
+    display: inline-block;
+    margin-left: 2rem;
+  }
+
+  .site-header {
+    height: 800px;
+  }
+
+  .kicker,
+  .lead,
+  .cta {
+    margin: 1.5rem 0;
+  }
+  
+  .kicker {
+    font-size: 2.6rem;
+  }
+
+  .lead {
+    font-size: 4.6rem;
+  }
+
+  .cta {
+    font-size: 1.2rem;
+    padding: 1.3rem 1.5rem;
+  }
+
+  .services-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .service {
+    flex: 1;
+  }
+}
